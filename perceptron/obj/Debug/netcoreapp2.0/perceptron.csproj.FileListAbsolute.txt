@@ -1,0 +1,11 @@
+C:\Users\jpsneto\home\lab\csharp\perceptron\obj\Debug\netcoreapp2.0\perceptron.csprojAssemblyReference.cache
+C:\Users\jpsneto\home\lab\csharp\perceptron\obj\Debug\netcoreapp2.0\perceptron.csproj.CoreCompileInputs.cache
+C:\Users\jpsneto\home\lab\csharp\perceptron\obj\Debug\netcoreapp2.0\perceptron.AssemblyInfoInputs.cache
+C:\Users\jpsneto\home\lab\csharp\perceptron\obj\Debug\netcoreapp2.0\perceptron.AssemblyInfo.cs
+C:\Users\jpsneto\home\lab\csharp\perceptron\bin\Debug\netcoreapp2.0\perceptron.deps.json
+C:\Users\jpsneto\home\lab\csharp\perceptron\bin\Debug\netcoreapp2.0\perceptron.runtimeconfig.json
+C:\Users\jpsneto\home\lab\csharp\perceptron\bin\Debug\netcoreapp2.0\perceptron.runtimeconfig.dev.json
+C:\Users\jpsneto\home\lab\csharp\perceptron\bin\Debug\netcoreapp2.0\perceptron.dll
+C:\Users\jpsneto\home\lab\csharp\perceptron\bin\Debug\netcoreapp2.0\perceptron.pdb
+C:\Users\jpsneto\home\lab\csharp\perceptron\obj\Debug\netcoreapp2.0\perceptron.dll
+C:\Users\jpsneto\home\lab\csharp\perceptron\obj\Debug\netcoreapp2.0\perceptron.pdb
