@@ -28,10 +28,19 @@ class GFG
     // Driver method
     public static void Main()
     {
-        int []arr = {64, 34, 25, 12, 22, 11, 90};
+        int n,i;
+        Console.WriteLine("Enter your Array length");//Just tried to fo it according to user's choice
+        n=Console.ReadLine();
+        int []arr=new arr[n];
+        for(i=0;i<=n;i++)
+        {
+         Console.WriteLine("Enter your elements one by one");//took input from user only
+         [i]arr=Console.ReadLine();
+        }
+     
         bubbleSort(arr);
         Console.WriteLine("Sorted array");
-        printArray(arr);
+        printArray(arr);////
     }
  
 }
