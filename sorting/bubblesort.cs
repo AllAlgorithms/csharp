@@ -1,7 +1,7 @@
 using System;
- 
+
 class GFG
-{ 
+{
     static void bubbleSort(int []arr)
     {
         int n = arr.Length;
@@ -15,7 +15,7 @@ class GFG
                     arr[j + 1] = temp;
                 }
     }
- 
+
     /* Prints the array */
     static void printArray(int []arr)
     {
@@ -24,7 +24,18 @@ class GFG
             Console.Write(arr[i] + " ");
         Console.WriteLine();
     }
- 
+    static void MultiplyArray(int []arr,int multiplicateur)
+    {
+      int n = arr.Length;
+        for (int i = 0; i < n; ++i)
+        {
+              int arrayMultiply;
+              arrayMultiply = arr[i] * multiplicateur;
+           Console.Write(arrayMultiply + " ");
+            Console.WriteLine();
+        }
+    }
+
     // Driver method
     public static void Main()
     {
@@ -32,7 +43,11 @@ class GFG
         bubbleSort(arr);
         Console.WriteLine("Sorted array");
         printArray(arr);
+        Console.WriteLine("Print array");
+        MultiplyArray(arr,2);
+        Console.WriteLine("Multiply Array");
+
+
     }
- 
+
 }
- 
