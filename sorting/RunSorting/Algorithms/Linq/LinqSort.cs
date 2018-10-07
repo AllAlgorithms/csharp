@@ -9,32 +9,23 @@ namespace AllAlgorithms.Csharp.Sorting.RunSorting.Algorithms.Linq
     {
         public int[] OrderBy(int[] dataToSort)
         {
-            int[] arrayToSort = new int[dataToSort.Length];
-            Array.Copy(dataToSort, arrayToSort, dataToSort.Length);
-
-            return arrayToSort.OrderBy(o => o).ToArray();
+            return dataToSort.OrderBy(o => o).ToArray();
         }
 
         public int[] GenericSort(int[] dataToSort)
         {
-            int[] arrayToSort = new int[dataToSort.Length];
-            Array.Copy(dataToSort, arrayToSort, dataToSort.Length);
-
             var comparer = new GenericComparer();
-            Array.Sort(arrayToSort, comparer);
+            Array.Sort(dataToSort, comparer);
 
-            return arrayToSort;
+            return dataToSort;
         }
 
         public int[] TypedSort(int[] dataToSort)
         {
-            int[] arrayToSort = new int[dataToSort.Length];
-            Array.Copy(dataToSort, arrayToSort, dataToSort.Length);
-
             var comparer = new TypedComparer();
-            Array.Sort(arrayToSort, comparer);
+            Array.Sort(dataToSort, comparer);
 
-            return arrayToSort;
+            return dataToSort;
         }
 
         private class GenericComparer : IComparer
