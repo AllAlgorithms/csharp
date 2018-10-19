@@ -7,10 +7,10 @@
 	<br>
   <p>All ▲lgorithms implemented in C Sharp</p>
 	<a href="https://algorithms.abranhe.com"><img src="https://cdn.abranhe.com/projects/algorithms/badge.svg"></a>
-	<a href="https://github.com/abranhe/algorithms/blob/master/LICENSE"><img src="https://img.shields.io/github/license/abranhe/algorithms.svg" /></a>
-	<a href="https://cash.me/$abranhe"><img src="https://cdn.abraham.gq/badges/cash-me.svg"></a>
-	<a href="https://www.patreon.com/abranhe"><img src="https://cdn.abraham.gq/badges/patreon.svg" /></a>
-	<a href="https://paypal.me/abranhe/10"><img src="https://cdn.abraham.gq/badges/paypal.svg" /></a>
+	<a href="https://github.com/abranhe/algorithms/blob/master/license"><img src="https://img.shields.io/github/license/abranhe/algorithms.svg" /></a>
+	<a href="https://cash.me/$abranhe"><img src="https://cdn.abranhe.com/badges/cash-me.svg"></a>
+	<a href="https://www.patreon.com/abranhe"><img src="https://cdn.abranhe.com/badges/patreon.svg" /></a>
+	<a href="https://paypal.me/abranhe/10"><img src="https://cdn.abranhe.com/badges/paypal.svg" /></a>
 	<br>
 	<br>
 	<a href="https://allalgorithms.com"><code>allalgorithms.com</code></a>
