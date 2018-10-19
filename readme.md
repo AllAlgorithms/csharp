@@ -1,9 +1,14 @@
 <div align="center">
+	<br>
+	<br>
+	<br>
 	<img width="400" height="270" src="https://cdn.abranhe.com/projects/algorithms/logos/csharp.svg">
 	<br>
 	<br>
+	<br>
+	<br>
 	<img src="https://cdn.abranhe.com/projects/algorithms/algorithms.svg" width="400px">
-  <br>
+  	<br>
 	<br>
   <p>All ▲lgorithms implemented in C Sharp</p>
 	<a href="https://algorithms.abranhe.com"><img src="https://cdn.abranhe.com/projects/algorithms/badge.svg"></a>
