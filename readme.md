@@ -55,10 +55,10 @@
 
 ## Data Structures
 
-- Queue
-	- [Queue](data-structures/queue/queue.cs)
-- Linked List
-	- [Linked List](data-structures/linked-list/linkedlist.cs)
+- [Queue](data-structures/queue.cs)
+- [Stack](data-structures/stack.cs)
+- [Linked List](data-structures/linkedlist.cs)
+- [Doubly-Linked List](data-structures/DoublyLinkedList.cs)
 
 ## Searches
 
