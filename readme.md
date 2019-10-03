@@ -81,6 +81,10 @@
 
 - [Palindrome](strings/palindrome.cpp)
 
+## Others
+
+- [Password Generator](others/PasswordGenerator.cs)
+
 ## License
 
 This work is licensed under a [MIT License](https://github.com/abranhe/algorithms/blob/master/license)
