@@ -1,24 +1,38 @@
-﻿
-namespace Algorithms
-{
-    class selectionsort
-    {
-        public static void selectionSort(int[] values)
+        static void SelectionSort(int[] array)
         {
-            for(int i = 0; i < values.Length; ++i)
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                int minIndex = i;
-                for(int j = i + 1; j < values.Length; ++j)
+                int imin = i;
+
+                for (int j = i + 1; j < array.Length; j++)
                 {
-                    if(values[j] < values[minIndex])
-                    {
-                        minIndex = j;
-                    }
+                    if (array[j] < array[imin]) imin = j;
                 }
-                int temp = values[i];
-                values[i] = values[minIndex];
-                values[minIndex] = temp;
+
+                if (imin != array[i])
+                {
+                    int temp = array[i];
+                    array[i] = array[imin];
+                    array[imin] = temp;
+                }
             }
         }
-    }
-}
+
+        static void Tryit()
+        {
+            int[] array = { 8, 2, 4, 9, 1, 10 };
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+
+            Console.WriteLine();
+
+            SelectionSort(array);
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+        }

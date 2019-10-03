@@ -1,120 +1,64 @@
+﻿/* Stack (Abstract Data Type) C# - Created by: Ehsan Mohammadi
+   
+    The order in which elements come off a stack gives rise to its alternative name, LIFO (last in, first out).
+    Stack has two principal operations:
+     1- push, which adds an element to the collection.
+     2- pop, which removes the most recently added element that was not yet removed.
+ */
+
 using System;
-using System.Collections.Generic;
 
-/// <summary>
-///     Generic stack (Last In First Out) implementation using an array.
-/// </summary>
-/// <typeparam name="T">Item type.</typeparam>
-class Stack<T>
+namespace Stack
 {
-    private T[] _array;
-    public int _size;
-    public int _top;
-
-    /// <summary>
-    ///     Initialize the stack.
-    /// </summary>
-    public Stack()
+    class Stack<T>
     {
-        _size = 10;
-        _top = -1;
-        _array = new T[_size];
-    }
+        T[] items;
+        int top = 0;
 
-    /// <summary>
-    ///     Push an item to the stack.
-    /// </summary>
-    /// <param name="item">Item to be pushed.</param>
-    public void Push(T item)
-    {
-        if (_top == _size - 1)
+        public Stack(int size)
         {
-            // Array top capacity reached. resizing array
-            _size = _size * 2;
-            T[] newArray = new T[_size];
-            Array.Copy(_array, 0, newArray, 0, _array.Length);
-            _array = newArray;
+            items = new T[size];
         }
-        _top++;
-        _array[_top] = item;
-    }
 
-    /// <summary>
-    ///     Pop last item from the stack. Pop removes the popped item from the stack.
-    /// </summary>
-    /// <returns>Popped item.</returns>
-    public T Pop()
-    {
-        return PopOrPeek(true);
-    }
-
-    /// <summary>
-    ///     Peek last item from the stack. Peek won't remove the item from the stack.
-    /// </summary>
-    /// <returns>Peeked item.</returns>
-    public T Peek()
-    {
-        return PopOrPeek(false);
-    }
-
-    private T PopOrPeek(bool pop)
-    {
-        if (_top == -1)
-            throw new InvalidOperationException("Stack is empty.");
-        T item = _array[_top];
-
-        if (pop)
+        public void Push(T value)
         {
-            _array[_top] = default(T);
-            _top--;
+            lock (this)
+            {
+                if (top < items.Length)
+                    items[top++] = value;
+                else
+                    throw new System.ArgumentException("Stack is full!");
+            }
         }
-        return item;
-    }
 
-    /// <summary>
-    ///     Returns the content of the stack as string.
-    /// </summary>
-    /// <returns>Content of the stack as string.</returns>
-    public override string ToString()
-    {
-        var result = string.Empty;
-        for (int i = 0; i<= _top; i++)
+        public T Pop()
         {
-            result += _array[i].ToString() + " ";
+            lock (this)
+            {
+                if (top > 0)
+                {
+                    return items[top--];
+                }
+                else
+                    throw new System.ArgumentException("Stack is empty!");
+            }
         }
-        return result.Trim();
+
+        public void Clear()
+        {
+            top = 0;
+        }
     }
 
-    /// <summary>
-    ///     Clear all items from the stack.
-    /// </summary>
-    public void Clear()
+    class TestStack
     {
-        Array.Clear(_array, 0, _size);
-        _top = -1;
-    }
-}
-
-class StackTest
-{
-    public static void Main()
-    {
-        var stack = new Stack<int>();
-        stack.Push(1);
-        stack.Push(2);
-        stack.Push(3);
-        Console.WriteLine("Popped: {0}", stack.Pop());
-        stack.Push(4);
-        stack.Push(5);
-        Console.WriteLine("Peeked: {0}", stack.Peek());
-        stack.Push(6);
-        stack.Push(7);
-        Console.WriteLine("Peeked: {0}", stack.Peek());
-        stack.Push(8);
-        stack.Push(9);
-        stack.Push(10);
-        Console.WriteLine("Popped: {0}", stack.Pop());
-        Console.WriteLine("Popped: {0}", stack.Pop());
-        Console.WriteLine("Stack contents: {0}", stack.ToString());
+        static void Main(string[] args)
+        {
+            Stack<string> stack = new Stack<string>(10);
+            stack.Push("Ehsan");
+            stack.Push("Mohammadi");
+            stack.Pop();
+            stack.Clear();
+        }
     }
 }
