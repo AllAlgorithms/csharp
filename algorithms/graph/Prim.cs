@@ -43,7 +43,6 @@ class Prim {
             selected[y] = 1;
             no_edge += 1;
         }
-        Console.ReadKey ();
     }
 
     static void Main (string[] args) {
