@@ -137,6 +137,7 @@ class DoublyLinkedListTest
     static void Main(string[] args)
     {
         DoublyLinkedList<int> list = new DoublyLinkedList<int>();
+        
         list.InsertAtEnd(1);
         list.InsertAtEnd(2);
         list.InsertAtEnd(3);
